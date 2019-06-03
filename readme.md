@@ -8,11 +8,11 @@
 3)	Open the SD card on your computer.  The partition drive should be called “boot”.  Create an empty text file called “ssh” (no extension) on the drive
 4)	Put the SD card into the Pi and connect it to a dhcp network source with POE power
 5)	SSH to the pi via the IP address on the raspberry pi screen.  The default user is “pi” and password is “raspberry”
-6)	Run these commands to get apt ready to install additional software:
-`sudo apt update`
+6)	Run these commands to get apt ready to install additional software:\
+`sudo apt update`\
 `sudo apt upgrade`
-7)	Make sure that you set the date/time to the appropriate value by running this command (with the current date and time and timezone):
-`sudo timedatectl set-timezone "America/Denver"`
+7)	Make sure that you set the date/time to the appropriate value by running this command (with the current date and time and timezone):\
+`sudo timedatectl set-timezone "America/Denver"`\
 `sudo date –s “Thu May 17 08:21:00 -06:00 2019”`
 
 ### i3 Window Manager
