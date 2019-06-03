@@ -33,8 +33,8 @@
 6)	Run these commands to get apt ready to install additional software:
 `sudo apt update`
 `sudo apt upgrade`
-7)	Make sure that you set the date/time to the appropriate value by running this command (with the current date and time and timezone):
-`sudo timedatectl set-timezone "America/Denver"`
+7)	Make sure that you set the date/time to the appropriate value by running this command (with the current date and time and timezone):\
+`sudo timedatectl set-timezone "America/Denver"`\
 `sudo date –s “Thu May 17 08:21:00 -06:00 2019”`
 
 ### i3 Window Manager
@@ -132,5 +132,6 @@ You will need to create several databases and documents for a base configuration
 `ui-configuration` database:
 [BLDG-ROOM](/couch-document-samples/ui-config.json)
 
+
 ### Controlling the room
-In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and 
+In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and a PC plugged into the DVI port.sss
