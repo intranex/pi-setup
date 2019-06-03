@@ -92,7 +92,7 @@
 
 ### Setting up Docker
 1) First, copy the docker-compose.yml file to the pi by running this command:\
-`curl https://raw.githubusercontent.com/byuoitav/pi-setup/master/docker-compose.yml > docker-compose.yml`
+`want`
 
 2) Then, run `docker-compose up -d` to start the docker containers
 
