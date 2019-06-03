@@ -25,6 +25,7 @@ services:
             - "8888:8888"
         environment:
             - SYSTEM_ID=BLDG-ROOM-CP1
+            - BYPASS_AUTH=true
             - ROOM_SYSTEM=true
             - DB_ADDRESS=http://localhost:5984
             - HUB_ADDRESS=localhost:7100
@@ -38,7 +39,11 @@ services:
     adcp-control-microservice:
         image: byuoitav/rpi-adcp-control-microservice:latest
         ports:
-            - "8012:8012"        
+            - "8012:8012"     
+        environment:
+            - SYSTEM_ID=BLDG-ROOM-CP1
+            - BYPASS_AUTH=true
+            - ROOM_SYSTEM=true               
         network_mode: "host"
         restart: always
         tty: true

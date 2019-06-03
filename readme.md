@@ -129,6 +129,7 @@ You will need to create several databases and documents for a base configuration
 
 `device_types` database:
 [ADCP Projector](/couch-document-samples/device-type-adcp-projector.json)
+[non-controllable](/couch-document-samples/device-type-non-controllable.json)
 
 `ui-configuration` database:
 [BLDG-ROOM](/couch-document-samples/ui-config.json)
