@@ -1,0 +1,44 @@
+{
+    "_id": "BLDG-ROOM-D1",    
+    "name": "D1",
+    "address": "192.168.1.100",
+    "description": "",
+    "display_name": "Projector",
+    "type": {
+      "_id": "ADCP Projector"
+    },
+    "roles": [
+      {
+        "_id": "AudioOut",
+        "description": "Acts as an audio output device"
+      },
+      {
+        "_id": "VideoOut",
+        "description": "Acts as a video output device"
+      }
+    ],
+    "ports": [
+      {
+        "_id": "hdmi1",
+        "friendly_name": "HDMI port 1",
+        "source_device": "BLDG-ROOM-HDMI1",
+        "destination_device": "BLGD-ROOM-D1",
+        "description": "HDMI port 1",
+        "tags": [
+          "in",
+          "video"
+        ]
+      },
+      {
+        "_id": "dvi1",
+        "friendly_name": "DVI port 1",
+        "source_device": "BLDG-ROOM-PC1",
+        "destination_device": "BLGD-ROOM-D1",
+        "description": "DVI port 1",
+        "tags": [
+          "in",
+          "video"
+        ]
+      }
+    ]
+  }

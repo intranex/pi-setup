@@ -1,0 +1,21 @@
+{
+    "_id": "BLDG-ROOM-HDMI1",    
+    "name": "HDMI1",
+    "address": "0.0.0.0",
+    "description": "Table HDMI",
+    "display_name": "Table HDMI",
+    "type": {
+      "_id": "non-controllable"
+    },
+    "roles": [
+      {
+        "_id": "AudioIn",
+        "description": "AudioIn"
+      },
+      {
+        "_id": "VideoIn",
+        "description": "VideoIn"
+      }
+    ],
+    "ports": []
+  }

@@ -1,0 +1,44 @@
+{
+    "_id": "BLDG-ROOM",    
+    "api": [
+      "localhost"
+    ],
+    "inputConfiguration": [
+      {
+        "name": "HDMI1",
+        "icon": "settings_input_hdmi"
+      },
+      {
+        "name": "PC1",
+        "icon": "computer"
+      }
+    ],
+    "presets": [
+      {
+        "name": "DefaultPreset",
+        "displays": [
+          "D1"
+        ],
+        "icon": "tv",
+        "audioDevices": [
+          "D1"
+        ],
+        "inputs": [
+          "HDMI1",
+          "PC1"
+        ],
+        "independentAudioDevices": null,
+        "commands": {
+        }
+      }
+    ],
+    "panels": [
+      {
+        "hostname": "BLDG-ROOM-CP1",
+        "uipath": "/blueberry",
+        "preset": "DefaultPreset",
+        "features": []
+      }
+    ],
+    "audioConfiguration": []
+  }

@@ -1,0 +1,21 @@
+{
+    "_id": "BLDG-ROOM-PC1",    
+    "name": "PC1",
+    "address": "0.0.0.0",
+    "description": "PC",
+    "display_name": "PC",
+    "type": {
+      "_id": "non-controllable"
+    },
+    "roles": [
+      {
+        "_id": "AudioIn",
+        "description": "AudioIn"
+      },
+      {
+        "_id": "VideoIn",
+        "description": "VideoIn"
+      }
+    ],
+    "ports": []
+  }

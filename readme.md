@@ -76,3 +76,24 @@
 
 ### docker-compose.yml
 [Sample docker-compose.yml file](docker-compose.yml)
+
+### Couch configuration sample documents
+buildings database:
+[BLDG](/couch-document-samples/building.json)
+
+device database:
+[D1](/couch-document-samples/device-D1.json)
+[HDMI1](/couch-document-samples/device-HDMI1.json)
+[PC1](/couch-document-samples/device-PC1.json)
+
+rooms database:
+[BLDG-ROOM](/couch-document-samples/room.json)
+
+room_configurations database:
+[Default](/couch-document-samples/room-configuration-default.json)
+
+device_types database:
+[ADCP Projector](/couch-document-samples/device-type-adcp-projector.json)
+
+ui-configuration database:
+[BLDG-ROOM](/couch-document-samples/ui-config.json)

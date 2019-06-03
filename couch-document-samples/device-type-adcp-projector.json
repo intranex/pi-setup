@@ -1,0 +1,286 @@
+{
+    "_id": "ADCP Projector",
+    "description": "Projector configured to used ADCP Commands",
+    "display_name": "ADCP Projector",
+    "output": true,
+    "destination": true,
+    "power_states": [
+      {
+        "_id": "On",
+        "description": "On",
+        "tags": []
+      },
+      {
+        "_id": "Standby",
+        "description": "Standby",
+        "tags": []
+      }
+    ],
+    "ports": [
+      {
+        "_id": "hdmi1",
+        "friendly_name": "HDMI",
+        "description": "hdmi port 1",
+        "tags": [
+          "port-in"
+        ]
+      },
+      {
+        "_id": "hdbaset1",
+        "friendly_name": "HDBaseT",
+        "description": "HDBaseT port 1",
+        "tags": [
+          "port-in"
+        ]
+      },
+      {
+        "_id": "dvi1",
+        "friendly_name": "DVI",
+        "description": "DVI port 1",
+        "tags": [
+          "port-in"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "_id": "AudioOut",
+        "description": "Acts as an audio output device"
+      },
+      {
+        "_id": "VideoOut",
+        "description": "Acts as a video output device"
+      }
+    ],
+    "commands": [
+      {
+        "_id": "PowerOn",
+        "description": "PowerOn",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "PowerOn",
+          "description": "Standard PowerOn endpoint.",
+          "path": "/:address/power/on"
+        },
+        "priority": 1
+      },
+      {
+        "_id": "Standby",
+        "description": "Standby",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "Standby",
+          "description": "Standard standby endpoint.",
+          "path": "/:address/power/standby"
+        },
+        "priority": 100
+      },
+      {
+        "_id": "ChangeInput",
+        "description": "ChangeInput",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "ChangeInput",
+          "description": "Standard ChangeInput endpoint.",
+          "path": "/:address/input/:port"
+        },
+        "priority": 10
+      },
+      {
+        "_id": "SetVolume",
+        "description": "SetVolume",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "SetVolume",
+          "description": "Standart SetVolume endpoint",
+          "path": "/:address/volume/set/:level"
+        },
+        "priority": 10
+      },
+      {
+        "_id": "BlankDisplay",
+        "description": "BlankDisplay",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "BlankScreen",
+          "description": "Standard BlankScreen endpoint.",
+          "path": "/:address/display/blank"
+        },
+        "priority": 10
+      },
+      {
+        "_id": "UnblankDisplay",
+        "description": "UnblankDisplay",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "UnblankScreen",
+          "description": "Standard UnblankScreen endpoint.",
+          "path": "/:address/display/unblank"
+        },
+        "priority": 7
+      },
+      {
+        "_id": "Mute",
+        "description": "Mute",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "Mute",
+          "description": "Standard Mute endpoint",
+          "path": "/:address/volume/mute"
+        },
+        "priority": 10
+      },
+      {
+        "_id": "UnMute",
+        "description": "UnMute",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "UnMute",
+          "description": "Standard UnMute endpoint",
+          "path": "/:address/volume/unmute"
+        },
+        "priority": 10
+      },
+      {
+        "_id": "STATUS_Power",
+        "description": "STATUS_Power",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "StatusPower",
+          "description": "Standard power state endpoint",
+          "path": "/:address/power/status"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "STATUS_Input",
+        "description": "STATUS_Input",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "StatusInput",
+          "description": "returns current input state for devices with a single input",
+          "path": "/:address/input/current"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "STATUS_Volume",
+        "description": "STATUS_Volume",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "StatusVolume",
+          "description": "Standard volume state endpoint",
+          "path": "/:address/volume/level"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "STATUS_Muted",
+        "description": "STATUS_Muted",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "StatusMute",
+          "description": "Standard mute state endpoint",
+          "path": "/:address/volume/mute/status"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "STATUS_Blanked",
+        "description": "STATUS_Blanked",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "StatusBlank",
+          "description": "Standard display status endpoint",
+          "path": "/:address/display/status"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "HardwareInfo",
+        "description": "HardwareInfo",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "HardwareInfo",
+          "description": "Hardware information endpoint",
+          "path": "/:address/hardware"
+        },
+        "priority": 20
+      },
+      {
+        "_id": "ActiveSignal",
+        "description": "ActiveSignal",
+        "microservice": {
+          "_id": "adcp-control-microservice",
+          "description": "Used to control ADCP enabled devices",
+          "address": "http://localhost:8012"
+        },
+        "endpoint": {
+          "_id": "ActiveSignal",
+          "description": "Active signal endpoint",
+          "path": "/:address/active/:port"
+        },
+        "priority": 20
+      }
+    ],
+    "tags": [
+      "projector",
+      "display"
+    ]
+  }

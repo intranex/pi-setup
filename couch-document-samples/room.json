@@ -1,0 +1,10 @@
+{
+    "_id": "BLDG-ROOM",    
+    "name": "BLDG-ROOM",
+    "description": "",
+    "configuration": {
+      "_id": "Default"
+    },
+    "designation": "production",
+    "tags": []
+  }
