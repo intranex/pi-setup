@@ -16,55 +16,54 @@
 `sudo date –s “Thu May 17 08:21:00 -06:00 2019”`
 
 ### i3 Window Manager
-1)	Install i3 by issuing this command:
+1)	Install i3 by issuing this command:\
 `sudo apt install i3`
 
 ### vim
-1)	Install vim by issuing this command
+1)	Install vim by issuing this command:\
 `sudo apt install vim`
 
 ### xorg xserver
-1)	Install xorg xserver by issuing this command:
-`sudo apt install xserver-xorg`
+1)	Install xorg xserver by issuing this command:\
+`sudo apt install xserver-xorg`\
 `sudo apt install xinit`
 
 ### chromium
-1)	Install i3 by issuing this command:
+1)	Install i3 by issuing this command:\
 `sudo apt install chromium-browser`
 
 ### docker
 1)	Install docker by issuing this set of commands:
-2)	First, install supporting software for docker
-`sudo apt install apt-transport-https`
-`sudo apt install ca-certificates`
-`sudo apt install curl`
-`sudo apt install gnupg2`
-`sudo apt install software-properties-common`
-3)	Next, add Docker’s official GPG key:
-`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
-4)	 Next, install docker for raspbian by running these commands
-`echo "deb [arch=armhf] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list`
-
-`sudo apt update`
-`sudo apt-cache policy docker-ce`
+2)	First, install supporting software for docker\
+`sudo apt install apt-transport-https`\
+`sudo apt install ca-certificates`\
+`sudo apt install curl`\
+`sudo apt install gnupg2`\
+`sudo apt install software-properties-common`\
+3)	Next, add Docker’s official GPG key:\
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`\
+4)	 Next, install docker for raspbian by running these commands:\
+`echo "deb [arch=armhf] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list`\
+`sudo apt update`\
+`sudo apt-cache policy docker-ce`\
 `sudo apt install -y docker-ce=17.09.0~ce-0~debian`
 
-5)	Set Docker to hold the version until specifically updated by running this command:
+5)	Set Docker to hold the version until specifically updated by running this command:\
 `sudo apt-mark hold docker`
 
-6)	Enable control of docker for the pi user by running these commands and waiting for a reboot:
-`sudo groupadd docker`
-`sudo usermod –aG docker pi`
+6)	Enable control of docker for the pi user by running these commands and waiting for a reboot:\
+`sudo groupadd docker`\
+`sudo usermod –aG docker pi`\
 `sudo reboot`
 
-7)	Start docker by running these commands
-`sudo systemctl enable docker`
+7)	Start docker by running these commands\
+`sudo systemctl enable docker`\
 `sudo systemctl start docker`
 
 ### docker-compose
-1)	Install docker compose by running these commands:
-`sudo apt install python3-pip`
-`sudo apt install libffi-dev`
+1)	Install docker compose by running these commands:\
+`sudo apt install python3-pip`\
+`sudo apt install libffi-dev`\
 `sudo pip3 install docker-compose`
 
 ## Base setup - Control an ADCP Projector
