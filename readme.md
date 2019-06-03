@@ -117,7 +117,7 @@ You will need to create several databases and documents for a base configuration
 [BLDG](/couch-document-samples/building.json)
 
 `devices` database:
-[D1](/couch-document-samples/device-D1.json)
+[D1](/couch-document-samples/device-D1.json) ***be sure to change the address to be the ip address of your target projector
 [HDMI1](/couch-document-samples/device-HDMI1.json)
 [PC1](/couch-document-samples/device-PC1.json)
 
@@ -133,7 +133,72 @@ You will need to create several databases and documents for a base configuration
 
 `ui-configuration` database:
 [BLDG-ROOM](/couch-document-samples/ui-config.json)
+blueberry
+* the blueberry document needs to have 3 attachments added:\
+[help.json](help.json)
+[logo.svg](logo.svg)
+[colors.css](colors.css)
 
 
 ### Controlling the room
-In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and a PC plugged into the DVI port.sss
+In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and a PC plugged into the DVI port.
+
+#### Touchpanel UI
+Point a web browser to `http://[pi-ip-addr]:8888` to see the default BYU User interface that you can use for testing.  You should be able to turn the projector on and off, adjust volume, and switch inputs.
+
+#### Postman / cURL
+You may use any HTTP client program to talk to the av-api.   To use Postman, send a PUT request to `http://[pi-ip-addr]:8000` with a `Content-Type` header of `application/json`, and a json body similar to this:\
+`{
+    "displays": [
+        {
+            "name": "D1",
+            "power": "on",
+            "blanked": false,
+            "input": "PC1"
+        }
+    ]
+}`\
+to turn on the display and set the input to PC1\
+\
+`{
+    "displays": [
+        {
+            "name": "D1",
+            "power": "standby"
+        }
+    ]
+}`\
+to turn the display off\
+\
+`{
+    "audioDevices": [
+    {
+      "name": "D1",
+      "power": "on",
+      "muted": false,
+      "volume": 50
+    }
+  ]
+}`\
+to set the volume to 50\
+\
+`{
+    "displays": [
+        {
+            "name": "D1",
+            "power": "on",
+            "blanked": false,
+            "input": "HDMI1"
+        }
+    ],
+    "audioDevices": [
+    {
+      "name": "D1",
+      "power": "on",
+      "muted": false,
+      "volume": 20
+    }
+}`\
+to set the volume and set the input at the same time
+
+#### Simple Javascript

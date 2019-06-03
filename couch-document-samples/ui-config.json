@@ -13,9 +13,15 @@
         "icon": "computer"
       }
     ],
+    "outputConfiguration": [
+        {
+          "name": "D1",
+          "icon": "videocam"
+        }
+      ],
     "presets": [
       {
-        "name": "DefaultPreset",
+        "name": "Projector",
         "displays": [
           "D1"
         ],
@@ -35,8 +41,8 @@
     "panels": [
       {
         "hostname": "BLDG-ROOM-CP1",
-        "uipath": "/cherry",
-        "preset": "DefaultPreset",
+        "uipath": "/blueberry",
+        "preset": "Projector",
         "features": []
       }
     ],

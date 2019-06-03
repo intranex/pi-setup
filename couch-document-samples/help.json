@@ -1,0 +1,43 @@
+{
+  "helpHours": {
+    "sunday": {
+      "open": false,
+      "from": 0,
+      "to": 0
+    },
+    "monday": {
+      "open": true,
+      "from": 7,
+      "to": 17
+    },
+    "tuesday": {
+      "open": true,
+      "from": 7,
+      "to": 17
+    },
+    "wednesday": {
+      "open": true,
+      "from": 7,
+      "to": 17
+    },
+    "thursday": {
+      "open": true,
+      "from": 7,
+      "to": 17
+    },
+    "friday": {
+      "open": true,
+      "from": 7,
+      "to": 17
+    },
+    "saturday": {
+      "open": false,
+      "from": 0,
+      "to": 0
+    }
+  },
+  "helpMessage": {
+    "workHours": "Please call AV Support at XXX-XXX-XXXX for help, or request help by pressing 'Request Help'.",
+    "afterHours": "No technicians are currently available. For emergencies please call XXX-XXX-XXXX."
+  }
+}
