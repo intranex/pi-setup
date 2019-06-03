@@ -99,10 +99,11 @@
 3) Run `docker ps` to see the status of your docker containers
 
 ### Docker containers needed
-1) couch-db
-2) av-api
-3) adcp-control-microservice
-4) touchpanel-ui-microservice
+1) couch-db (for configuration storage)
+2) av-api (base api engine)
+3) adcp-control-microservice (sony adcp protocol translation service)
+4) touchpanel-ui-microservice (UI service)
+5) centeral event hub (needed for touchpanel UI)
 
 ### docker-compose.yml
 [Sample docker-compose.yml file](docker-compose.yml)
@@ -115,7 +116,7 @@ You will need to create several databases and documents for a base configuration
 `buildings` database:
 [BLDG](/couch-document-samples/building.json)
 
-`device` database:
+`devices` database:
 [D1](/couch-document-samples/device-D1.json)
 [HDMI1](/couch-document-samples/device-HDMI1.json)
 [PC1](/couch-document-samples/device-PC1.json)

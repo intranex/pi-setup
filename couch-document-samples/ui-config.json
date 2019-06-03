@@ -35,7 +35,7 @@
     "panels": [
       {
         "hostname": "BLDG-ROOM-CP1",
-        "uipath": "/blueberry",
+        "uipath": "/cherry",
         "preset": "DefaultPreset",
         "features": []
       }

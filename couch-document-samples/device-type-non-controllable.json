@@ -1,0 +1,17 @@
+{
+    "_id": "non-controllable",
+    "description": "A Non-controllable Device",
+    "display_name": "HDMI",
+    "input": true,
+    "source": true,
+    "roles": [
+      {
+        "_id": "AudioIn",
+        "description": "Acts as an audio input device"
+      },
+      {
+        "_id": "VideoIn",
+        "description": "Acts as a video input device"
+      }
+    ]
+  }

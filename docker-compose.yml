@@ -36,11 +36,7 @@ services:
     adcp-control-microservice:
         image: byuoitav/rpi-adcp-control-microservice:latest
         ports:
-            - "8012:8012"
-        environment:
-            - ROOM_SYSTEM=true
-            - SYSTEM_ID=ITB-BLDG-ROOM-CP1
-            - BYPASS_AUTH=true
+            - "8012:8012"        
         network_mode: "host"
         restart: always
         tty: true
@@ -51,6 +47,17 @@ services:
         image: treehouses/rpi-couchdb:2.1.1
         ports:
             - "5984:5984"
+        network_mode: "host"
+        restart: always
+        tty: true
+    central-event-hub:
+        image: byuoitav/rpi-central-event-hub:latest
+        ports:
+            - "7100:7100"
+        environment:
+            - SYSTEM_ID=BLDG-ROOM-CP1
+            - BYPASS_AUTH=true
+            - STOP_REPLICATION=true
         network_mode: "host"
         restart: always
         tty: true
