@@ -144,10 +144,10 @@ blueberry
 In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and a PC plugged into the DVI port.
 
 #### Touchpanel UI
-Point a web browser to `http://[pi-ip-addr]:8888` to see the default BYU User interface that you can use for testing.  You should be able to turn the projector on and off, adjust volume, and switch inputs.
+Point a web browser to `http://[pi-ip-addr]:8888/buildings/BLDG/rooms/ROOM` to see the default BYU User interface that you can use for testing.  You should be able to turn the projector on and off, adjust volume, and switch inputs.
 
 #### Postman / cURL
-You may use any HTTP client program to talk to the av-api.   To use Postman, send a PUT request to `http://[pi-ip-addr]:8000` with a `Content-Type` header of `application/json`, and a json body similar to this:\
+You may use any HTTP client program to talk to the av-api.   To use Postman, send a PUT request to `http://[pi-ip-addr]:8000/buildings/BLDG/rooms/ROOM` with a `Content-Type` header of `application/json`, and a json body similar to this:\
 `{
     "displays": [
         {
@@ -198,7 +198,6 @@ to set the volume to 50\
       "muted": false,
       "volume": 20
     }
+    ]
 }`\
 to set the volume and set the input at the same time
-
-#### Simple Javascript
