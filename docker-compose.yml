@@ -9,7 +9,7 @@ services:
             - SYSTEM_ID=BLDG-ROOM-CP1
             - ROOM_SYSTEM=true
             - DB_ADDRESS=http://localhost:5984
-            - STOP_REPLICATON=true
+            - STOP_REPLICATION=true
         network_mode: "host"
         restart: always
         tty: true
@@ -26,7 +26,7 @@ services:
             - SYSTEM_ID=BLDG-ROOM-CP1
             - ROOM_SYSTEM=true
             - DB_ADDRESS=http://localhost:5984
-            - STOP_REPLICATON=true
+            - STOP_REPLICATION=true
         network_mode: "host"
         restart: always
         tty: true
