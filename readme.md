@@ -75,4 +75,4 @@
 4) touchpanel-ui-microservice
 
 ### docker-compose.yml
-
+[Sample docker-compose.yml file](docker-compose.yml)
