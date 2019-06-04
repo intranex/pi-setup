@@ -137,7 +137,7 @@ You will need to create several databases and documents for a base configuration
 
 `ui-configuration` database:\
 [BLDG-ROOM](/couch-document-samples/ui-config.json)\
-blueberry\
+blueberry
 
 * the blueberry document needs to have 3 attachments added:\
 [help.json](help.json)\
