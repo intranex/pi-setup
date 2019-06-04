@@ -1,5 +1,12 @@
 version: '3'
 services:
+    couch-db:
+        image: treehouses/rpi-couchdb:2.1.1
+        ports:
+            - "5984:5984"
+        network_mode: "host"
+        restart: always
+        tty: true
     av-api:
         image: byuoitav/rpi-av-api:latest
         ports:
@@ -14,11 +21,6 @@ services:
         network_mode: "host"
         restart: always
         tty: true
-        logging:
-            options:
-                max-size: "100m"
-                mode: non-blocking
-                max-buffer-size: 4m
     touchpanel-ui-microservice:
         image: byuoitav/rpi-touchpanel-ui-microservice:latest
         ports:
@@ -33,9 +35,6 @@ services:
         network_mode: "host"
         restart: always
         tty: true
-        logging:
-            options:
-                max-size: "100m"
     adcp-control-microservice:
         image: byuoitav/rpi-adcp-control-microservice:latest
         ports:
@@ -44,16 +43,6 @@ services:
             - SYSTEM_ID=BLDG-ROOM-CP1
             - BYPASS_AUTH=true
             - ROOM_SYSTEM=true               
-        network_mode: "host"
-        restart: always
-        tty: true
-        logging:
-            options:
-                max-size: "100m"
-    couch-db:
-        image: treehouses/rpi-couchdb:2.1.1
-        ports:
-            - "5984:5984"
         network_mode: "host"
         restart: always
         tty: true
