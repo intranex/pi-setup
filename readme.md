@@ -137,12 +137,12 @@ You will need to create several databases and documents for a base configuration
 
 `ui-configuration` database:\
 [BLDG-ROOM](/couch-document-samples/ui-config.json)\
-blueberry
+[blueberry](/couch-document-samples/blueberry.json)
 
 * the blueberry document needs to have 3 attachments added:\
-[help.json](help.json)\
-[logo.svg](logo.svg)\
-[colors.css](colors.css)
+[help.json](/couch-document-samples/help.json)\
+[logo.svg](/couch-document-samples/logo.svg)\
+[colors.css](/couch-document-samples/colors.css)
 
 
 ### Controlling the room
