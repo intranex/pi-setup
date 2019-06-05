@@ -149,9 +149,9 @@ You will need to create several databases and documents for a base configuration
 In this scenario, we will use the AV-API to talk to a Sony ADCP projector.  The device configuration specified in the sample states that an HDMI input (HDMI1) is plugged into the HDMI port on the projector, and a PC plugged into the DVI port.
 
 #### Touchpanel UI
-Point a web browser to\
+Point a web browser to
 
-`http://[pi-ip-addr]:8888/buildings/BLDG/rooms/ROOM`\
+`http://[pi-ip-addr]:8888`
 
 to see the default BYU User interface that you can use for testing.  You should be able to turn the projector on and off, adjust volume, and switch inputs.
 
