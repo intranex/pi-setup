@@ -118,7 +118,7 @@ You will need to create several databases and documents for a base configuration
 
 ### Couch configuration sample documents
 `buildings` database:\
-[BLDG](/couch-document-samples/building.json)
+[BLDG](https://raw.githubusercontent.com/byuoitav/pi-setup/master/couch-document-samples/building.json)
 
 `devices` database:\
 [D1](/couch-document-samples/device-D1.json) ***be sure to change the address to be the ip address of your target projector\
