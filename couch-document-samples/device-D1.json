@@ -1,7 +1,7 @@
 {
-    "_id": "BLDG-ROOM-D1",    
+    "_id": "BLDG-ROOM-D1",
     "name": "D1",
-    "address": "192.168.1.100",
+    "address": "192.168.5.XX",
     "description": "",
     "display_name": "Projector",
     "type": {
@@ -30,11 +30,11 @@
         ]
       },
       {
-        "_id": "dvi1",
-        "friendly_name": "DVI port 1",
+        "_id": "hdmi2",
+        "friendly_name": "HDMI port 2",
         "source_device": "BLDG-ROOM-PC1",
         "destination_device": "BLDG-ROOM-D1",
-        "description": "DVI port 1",
+        "description": "HDMI port 2",
         "tags": [
           "in",
           "video"
