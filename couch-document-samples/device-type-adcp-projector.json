@@ -19,7 +19,7 @@
     "ports": [
       {
         "_id": "hdmi1",
-        "friendly_name": "HDMI",
+        "friendly_name": "HDMI 2",
         "description": "hdmi port 1",
         "tags": [
           "port-in"
@@ -37,6 +37,14 @@
         "_id": "dvi1",
         "friendly_name": "DVI",
         "description": "DVI port 1",
+        "tags": [
+          "port-in"
+        ]
+      },
+      {
+        "_id": "hdmi2",
+        "friendly_name": "HDMI 2",
+        "description": "HDMI port 2",
         "tags": [
           "port-in"
         ]
